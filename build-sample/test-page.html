@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/handlebars/handlebars.js"></script>
+    <script src="assets/js/uxrocket.multiselect.min.js"></script>
+    <link rel="stylesheet" href="assets/css/global.css" />
+</head>
+<body>
+    <script>
+        var sourceData = [
+            "JavaScript",
+            "jQuery",
+            "Lodash",
+            "Handlebars",
+            "Backbone",
+            "Angular",
+            "Grunt",
+            "NodeJS",
+            "NPM",
+            "Github",
+            "UXRocket",
+            "Karma",
+            "Jasmine",
+            "Uglify",
+            "Modernizr",
+            "Nginx"
+        ];
+
+        var sourceData2 = [
+            "Kedi",
+            "Köpek",
+            "Eşek",
+            "Sıçan",
+            "Tilki",
+            "Kurt",
+            "Aslan"
+        ];
+
+        function getSourceData(){
+            return sourceData;
+        }
+
+        var getSourceDataNesting = {
+            fromNestedFunction: getSourceData,
+            fromNestedObject  : sourceData
+        }
+    </script>
+    <div id="source" style="display: none">
+        [
+            "JavaScript",
+            "jQuery",
+            "Lodash",
+            "Handlebars",
+            "Backbone",
+            "Angular",
+            "Grunt",
+            "NodeJS",
+            "NPM",
+            "Github",
+            "UXRocket",
+            "Karma",
+            "Jasmine",
+            "Uglify",
+            "Modernizr",
+            "Nginx"
+        ]
+    </div>
+    <input class="one" data-source="./source.json" />
+    <input class="two" data-source="sourceData2" />
+
+    <script>
+        $(function(){
+            $("input.one").multiselect();
+            $("input.two").multiselect();
+        })
+    </script>
+</body>
+</html>
