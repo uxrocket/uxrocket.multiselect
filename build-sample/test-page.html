@@ -68,13 +68,21 @@
             "Nginx"
         ]
     </div>
-    <input class="one" data-source="./source.json" />
+    <input class="one" data-source="./source.json" data-options_ajax_method="GET" data-on-ready="test" />
     <input class="two" data-source="sourceData2" />
 
     <script>
+        function test(){
+            console.log("y", this);
+        }
+
         $(function(){
             $("input.one").multiselect();
-            $("input.two").multiselect();
+            $("input.two").multiselect({
+                onReady: function(){
+                    console.log("x", this);
+                }
+            });
         })
     </script>
 </body>
