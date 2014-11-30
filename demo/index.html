@@ -5,8 +5,11 @@
     <title></title>
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/handlebars/handlebars.js"></script>
-    <script src="assets/js/uxrocket.multiselect.min.js"></script>
-    <link rel="stylesheet" href="assets/css/global.css" />
+    <script src="../bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="../bower_components/uxrocket.utils/dist/uxrocket.utils.js"></script>
+    <script src="../bower_components/uxrocket.factory/src/uxrocket.factory.js"></script>
+    <script src="../src/uxrocket.multiselect.js"></script>
+    <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
     <script>
@@ -68,7 +71,7 @@
             "Nginx"
         ]
     </div>
-    <input class="one" data-source="./source.json" data-options_ajax_method="GET" data-on-ready="test" />
+    <input class="one" data-source="data/source.json" data-options_ajax_method="GET" data-on-ready="test" />
     <input class="two" data-source="sourceData2" />
 
     <script>

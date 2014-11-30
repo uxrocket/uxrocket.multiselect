@@ -22,7 +22,7 @@
             component           :   "<span class='uxrocket-multiselect-component'>" +
                                         "<span class='uxrocket-multiselect-component-list'>" +
                                         "</span>"+
-                                        "<i class='icon-arrow-down'></i>"+
+                                        "<i class='uxrocket-icon-arrow-down'></i>"+
                                     "</span>",
 
             componentList       :   "{{#unless this}}Seçiniz{{/unless}}"+

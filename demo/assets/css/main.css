@@ -1,0 +1,124 @@
+/* @author Rames Aliyev */
+.uxrocket-multiselect-wrap {
+  font-family: sans-serif;
+  color: #333;
+  font-size: 12px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.uxrocket-multiselect-wrap .medium {
+  width: 250px;
+  height: 26px;
+}
+
+.uxrocket-multiselect-component {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 20px 0 5px;
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+.uxrocket-multiselect-component .uxrocket-icon-arrow-down {
+  position: absolute;
+  right: 3px;
+  top: 5px;
+}
+.uxrocket-multiselect-component.medium {
+  line-height: 24px;
+}
+
+.uxrocket-multiselect-component-list {
+  display: inline-block;
+  overflow: hidden;
+  height: inherit;
+}
+
+.uxrocket-multiselect-dropdown {
+  position: absolute;
+  display: none;
+  padding: 6px 4px;
+  box-sizing: border-box;
+  border: 1px solid #dedede;
+  border-radius: 0 0 2px 2px;
+  background-color: #f0f0f0;
+}
+.uxrocket-multiselect-dropdown.medium {
+  width: 250px;
+  margin-top: 25px;
+}
+
+.uxrocket-multiselect-list {
+  margin: 0;
+  padding: 0;
+  margin-left: -3px;
+  list-style: none;
+}
+
+.uxrocket-multiselect-list-item {
+  margin-bottom: 3px;
+}
+.uxrocket-multiselect-list-item label {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
+.uxrocket-multiselect-list-item input {
+  margin-right: 5px;
+}
+
+.uxrocket-multiselect-search-input {
+  height: 26px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  outline: none;
+}
+.medium .uxrocket-multiselect-search-input {
+  width: 235px;
+  font-size: 13px;
+}
+
+.uxrocket-multiselect-title {
+  display: inline-block;
+  margin: 5px 0px;
+}
+
+.uxrocket-multiselect-selecteds {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.uxrocket-multiselect-selecteds.uxrocket-multiselect-all-selected {
+  border-bottom: none;
+  padding-bottom: 0px;
+}
+
+.uxrocket-multiselect-not-selecteds {
+  margin-top: 10px;
+}
+
+@font-face {
+  font-family: 'uxrocket';
+  src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMg6SAyoAAAC8AAAAYGNtYXAaVcxXAAABHAAAAExnYXNwAAAAEAAAAWgAAAAIZ2x5Zt8qFhAAAAFwAAAArGhlYWQDTGYhAAACHAAAADZoaGVhBq4DxgAAAlQAAAAkaG10eAYAARUAAAJ4AAAAFGxvY2EAKABqAAACjAAAAAxtYXhwAAcAJQAAApgAAAAgbmFtZevKBCsAAAK4AAABTnBvc3QAAwAAAAAECAAAACAAAwQAAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADmAAPA/8D/wAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAACAAAAAwAAABQAAwABAAAAFAAEADgAAAAKAAgAAgACAAEAIOYA//3//wAAAAAAIOYA//3//wAB/+MaBAADAAEAAAAAAAAAAAAAAAEAAf//AA8AAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQEVAUgC7AJSACIAAAE+ATMyFhceARUUBg8BDgEjIiYvAS4BNTQ2Nz4BMzIWHwE3Aq8FDQcHDQUFBgYFyAUNBwcNBcgFBQUFBQ0HBw0Fr68CSAUFBQUGDAcHDQXEBQUFBcQFDQcHDAYFBQUFoaEAAAEAAAABAAA2JXQZXw889QALBAAAAAAA0KERaQAAAADQoRFpAAAAAALsAlIAAAAIAAIAAAAAAAAAAQAAA8D/wAAABAAAAAAAAuwAAQAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAACAAAABAABFQAAAAAACgAUAB4AVgABAAAABQAjAAEAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAADgCuAAEAAAAAAAEAEAAAAAEAAAAAAAIADgBOAAEAAAAAAAMAEAAmAAEAAAAAAAQAEABcAAEAAAAAAAUAFgAQAAEAAAAAAAYACAA2AAEAAAAAAAoANABsAAMAAQQJAAEAEAAAAAMAAQQJAAIADgBOAAMAAQQJAAMAEAAmAAMAAQQJAAQAEABcAAMAAQQJAAUAFgAQAAMAAQQJAAYAEAA+AAMAAQQJAAoANABsAHUAeAByAG8AYwBrAGUAdABWAGUAcgBzAGkAbwBuACAAMQAuADAAdQB4AHIAbwBjAGsAZQB0dXhyb2NrZXQAdQB4AHIAbwBjAGsAZQB0AFIAZQBnAHUAbABhAHIAdQB4AHIAbwBjAGsAZQB0AEYAbwBuAHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAEkAYwBvAE0AbwBvAG4ALgAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=) format("truetype"), url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAR0AAsAAAAABCgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAABCAAAAGAAAABgDpIDKmNtYXAAAAFoAAAATAAAAEwaVcxXZ2FzcAAAAbQAAAAIAAAACAAAABBnbHlmAAABvAAAAKwAAACs3yoWEGhlYWQAAAJoAAAANgAAADYDTGYhaGhlYQAAAqAAAAAkAAAAJAauA8ZobXR4AAACxAAAABQAAAAUBgABFWxvY2EAAALYAAAADAAAAAwAKABqbWF4cAAAAuQAAAAgAAAAIAAHACVuYW1lAAADBAAAAU4AAAFO68oEK3Bvc3QAAARUAAAAIAAAACAAAwAAAAMEAAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAA5gADwP/A/8ADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAgAAAAMAAAAUAAMAAQAAABQABAA4AAAACgAIAAIAAgABACDmAP/9//8AAAAAACDmAP/9//8AAf/jGgQAAwABAAAAAAAAAAAAAAABAAH//wAPAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAEBFQFIAuwCUgAiAAABPgEzMhYXHgEVFAYPAQ4BIyImLwEuATU0Njc+ATMyFh8BNwKvBQ0HBw0FBQYGBcgFDQcHDQXIBQUFBQUNBwcNBa+vAkgFBQUFBgwHBw0FxAUFBQXEBQ0HBwwGBQUFBaGhAAABAAAAAQAANiV0GV8PPPUACwQAAAAAANChEWkAAAAA0KERaQAAAAAC7AJSAAAACAACAAAAAAAAAAEAAAPA/8AAAAQAAAAAAALsAAEAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAAAgAAAAQAARUAAAAAAAoAFAAeAFYAAQAAAAUAIwABAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA4ArgABAAAAAAABABAAAAABAAAAAAACAA4ATgABAAAAAAADABAAJgABAAAAAAAEABAAXAABAAAAAAAFABYAEAABAAAAAAAGAAgANgABAAAAAAAKADQAbAADAAEECQABABAAAAADAAEECQACAA4ATgADAAEECQADABAAJgADAAEECQAEABAAXAADAAEECQAFABYAEAADAAEECQAGABAAPgADAAEECQAKADQAbAB1AHgAcgBvAGMAawBlAHQAVgBlAHIAcwBpAG8AbgAgADEALgAwAHUAeAByAG8AYwBrAGUAdHV4cm9ja2V0AHUAeAByAG8AYwBrAGUAdABSAGUAZwB1AGwAYQByAHUAeAByAG8AYwBrAGUAdABGAG8AbgB0ACAAZwBlAG4AZQByAGEAdABlAGQAIABiAHkAIABJAGMAbwBNAG8AbwBuAC4AAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="uxrocket-icon-"], [class*=" uxrocket-icon-"] {
+  font-family: 'uxrocket';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.uxrocket-icon-arrow-down:before {
+  content: "\e600";
+}

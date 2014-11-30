@@ -7,13 +7,23 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
+    "*.md",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "coverage",
+    "docs",
+    "grunt-tasks",
+    "_src_",
+    "build",
+    "gruntfile.js",
+    "package.json"
   ],
   "dependencies": {
     "handlebars": "~2.0.0",
-    "jquery": "^1"
+    "jquery": "^1",
+    "uxrocket.factory": "~0.1.1",
+    "uxrocket.utils": "~0.1.0"
   }
 }
