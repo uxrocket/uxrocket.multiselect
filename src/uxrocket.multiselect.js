@@ -1,16 +1,3 @@
-/**
- * Turkcell UXITD
- * jQuery based multiselect plugin.
- *
- * @author Rameş Aliyev
- * @version 1.0
- *
- * @dependencies
- * - UXRocketFactory
- * - UXRocketUtils
- * - jQuery
- * - Lodash
- */
 (function(window, $){
     "use strict";
 
