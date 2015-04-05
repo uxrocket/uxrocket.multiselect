@@ -1,3 +1,16 @@
+/**
+ * Turkcell UXITD
+ * jQuery based multiselect plugin.
+ *
+ * @author Rameş Aliyev
+ * @version 0.2.0
+ *
+ * @dependencies
+ * - UXRocketFactory
+ * - UXRocketUtils
+ * - jQuery
+ * - Lodash
+ */
 (function(window, $){
     "use strict";
 
@@ -97,8 +110,8 @@
         template        : templates.default,
         customClasses   : {
             wrap        : "",
-            component   : "medium",
-            dropdown    : "medium"
+            component   : "",
+            dropdown    : ""
         }
     };
 
@@ -143,7 +156,6 @@
         dropdown = this.render(template.dropdown);
         this.elements.dropdown =
             $(dropdown)
-                .addClass(classes.wrap.custom)
                 .addClass(this.options.customClasses.dropdown)
                 .appendTo("body");
 
@@ -220,7 +232,7 @@
     // Toggle dropdown.
     MultiSelect.prototype.toggleDropdown = function(){
         this.adjustPosition();
-        this.elements.dropdown.toggle();
+        this.elements.dropdown.toggle().siblings('.' + this.elements.dropdown[0].className).hide();
     };
 
     // Search in not-selecteds.
@@ -321,11 +333,15 @@
     MultiSelect.prototype.adjustPosition = function(){
         // Get offset of component.
         var offset = this.elements.component.offset();
+        var width = this.elements.wrap.width();
+        var height = this.elements.wrap.height();
 
         // Attach to dropdown.
         this.elements.dropdown.css({
             top : offset.top,
-            left: offset.left
+            left: offset.left,
+            width: width,
+            "margin-top": height
         });
     };
 
@@ -339,6 +355,6 @@
     window.MultiSelect = window.UXRocketFactory.create(MultiSelect, {
         name   : "UXRocket Multi Select",
         slug   : "multiselect",
-        version: "0.1"
+        version: "0.2.0"
     });
 }(window, jQuery));

@@ -1,40 +1,38 @@
 /* @author Rames Aliyev */
-$multiselect-version: 0.1;
+$multiselect-version: 0.2.0;
 
 .uxrocket-multiselect-wrap {
+  display: block;
+  height: 32px;
+  font-size: 1em;
+  vertical-align: middle;
   font-family: sans-serif;
   color: #333;
-  font-size: 12px;
 
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select:none;
   user-select:none;
-
-  .medium {
-    width: 250px;
-    height: 26px;
-  }
 }
 
 .uxrocket-multiselect-component {
   position: relative;
   display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  width: 100%;
+
   box-sizing: border-box;
   padding: 0 20px 0 5px;
-  border: 1px solid #dedede;
+  border: 1px solid #cccccc;
+  background-color: #FFFFFF;
   border-radius: 2px;
-  background-color: #f0f0f0;
   cursor: pointer;
-  
+
   .uxrocket-icon-arrow-down {
     position: absolute;
     right: 3px;
-    top: 5px;
-  }
-
-  &.medium {
-    line-height: 24px;
+    top: 10px;
   }
 }
 
@@ -42,27 +40,39 @@ $multiselect-version: 0.1;
   display: inline-block;
   overflow: hidden;
   height: inherit;
+  color: #aaaaaa;
 }
 
 .uxrocket-multiselect-dropdown {
   position: absolute;
   display: none;
-  padding: 6px 4px;
+  height: auto;
+  padding: 6px 10px;
+  background-color: #ffffff;
   box-sizing: border-box;
-  border: 1px solid #dedede;
+  border: 1px solid #cccccc;
   border-radius: 0 0 2px 2px;
-  background-color: #f0f0f0;
+  z-index: 1;
 
-  &.medium {
-    width: 250px;
-    margin-top: 25px;
+  font-size: 1em;
+  vertical-align: middle;
+  font-family: sans-serif;
+  color: #333;
+
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select:none;
+  user-select:none;
+
+  input[type=checkbox] {
+    display: inline-block;
   }
 }
 
 .uxrocket-multiselect-list {
   margin: 0;
   padding: 0;
-  margin-left:-3px;
+  margin-left: 0px;
   list-style: none;
 }
 
@@ -81,15 +91,11 @@ $multiselect-version: 0.1;
 }
 
 .uxrocket-multiselect-search-input {
-  height: 26px;
+  width: 100%;
+  height: 24px;
   border: 1px solid #ccc;
   border-radius: 2px;
   outline: none;
-
-  .medium & {
-    width: 235px;
-    font-size: 13px;
-  }
 }
 
 .uxrocket-multiselect-title {
