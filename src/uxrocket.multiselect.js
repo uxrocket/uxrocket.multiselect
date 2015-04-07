@@ -3,7 +3,7 @@
  * jQuery based multiselect plugin.
  *
  * @author Rameş Aliyev
- * @version 0.2.0
+ * @version 0.2.1
  *
  * @dependencies
  * - UXRocketFactory
@@ -72,6 +72,7 @@
         // Selectors
         this.selectors = {
             pluginWrapper   : ".uxrocket-multiselect-wrap",
+            plugindropDown  : ".uxrocket-multiselect-dropdown",
             selectedsTitle  : ".uxrocket-multiselect-title",
             componentList   : ".uxrocket-multiselect-component-list",
             selectedsList   : ".uxrocket-multiselect-selecteds",
@@ -225,7 +226,9 @@
 
         // Close when document clicked.
         $(document).on("click", function(event){
-            if(!$(event.target).parents(_this.selectors.pluginWrapper).length) _this.elements.dropdown.hide();
+            if (!$(event.target).parents(_this.selectors.pluginWrapper).length && !$(event.target).parents(_this.selectors.plugindropDown).length) {
+                _this.elements.dropdown.hide();
+            }
         });
     };
 
@@ -355,6 +358,6 @@
     window.MultiSelect = window.UXRocketFactory.create(MultiSelect, {
         name   : "UXRocket Multi Select",
         slug   : "multiselect",
-        version: "0.2.0"
+        version: "0.2.1"
     });
 }(window, jQuery));
