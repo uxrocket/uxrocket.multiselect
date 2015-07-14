@@ -1,5 +1,5 @@
 /**
- * Turkcell UXITD
+ * UX Rocket
  * jQuery based multiselect plugin.
  *
  * @author Rameş Aliyev
